@@ -5,12 +5,11 @@ Created a simple Blackjack game using Pygame and PIL libraries.
 Icons used from www.flaticon.com
 
 Main Menu Screen:
-![](untitled.png)
+![](Images/Menu.png)
 
 Game Screen:
-![](instr.png)
-
+![](Images/Game.png)
 
 Instructions Screen:
-![](Insturctions.png)
+![](Images/Insturctions.png)
 
