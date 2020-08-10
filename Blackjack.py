@@ -28,6 +28,8 @@ Queen = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\Queen1.jpg").resize((70, 90
 King = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\King.png").resize((70, 90))
 Card = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\Card.jpg").resize((70, 90))
 Chips = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\Chips.png").resize((80, 80))
+Icon = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\blackjack.png").resize((80, 80))
+Icon2 = Image.open("C:\\Users\\Admin\\Desktop\\Deck\\baccarat.png").resize((80, 90))
 
 Ace_img = pygame.image.fromstring(Ace.tobytes(), Ace.size, Ace.mode)
 Two_img = pygame.image.fromstring(Two.tobytes(), Two.size, Two.mode)
@@ -44,6 +46,8 @@ Queen_img = pygame.image.fromstring(Queen.tobytes(), Queen.size, Queen.mode)
 King_img = pygame.image.fromstring(King.tobytes(), King.size, King.mode)
 Card_img = pygame.image.fromstring(Card.tobytes(), Card.size, Card.mode)
 Chips_img = pygame.image.fromstring(Chips.tobytes(), Chips.size, Chips.mode)
+Icon_img = pygame.image.fromstring(Icon.tobytes(), Icon.size, Icon.mode)
+Icons2_img = pygame.image.fromstring(Icon2.tobytes(), Icon2.size, Icon2.mode)
 
 Image_Deck = {"Ace": Ace_img, 2: Two_img, 3: Three_img, 4: Four_img, 5: Five_img, 6:Six_img, 7:Seven_img, 8:Eight_img, 9:Nine_img, 10:Ten_img, 11:Jack_img, 12:Queen_img, 13:King_img, 'Back':Card_img}
 Deck = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -350,10 +354,12 @@ def main_menu():
 
         while run:
             WIN.blit(BG, (0, 0))
-            welcome_label = welcome_font.render("Welcome to Blackjack!", 1, (255,255,255))
-            WIN.blit(welcome_label, (145, 230))
+            WIN.blit(Icon_img, (420, 100))
+            WIN.blit(Icons2_img, (300, 100))
+            welcome_label = welcome_font.render("Welcome to Blackjack!", 1, (255,255,0))
+            WIN.blit(welcome_label, (145, 210))
             start_button.draw(WIN, "Begin Game", 40)
-            instructions_button.draw(WIN, "Instructions", 40)
+            instructions_button.draw(WIN, "How to play", 40)
 
             pygame.display.update()
 
